@@ -3,9 +3,9 @@ sequenceDiagram
     participant browser
     participant server
 
-    browser->>server: POST note Super note
+    browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
     activate server
-    deactivate server
+    Note over browser,server: "Super note"
     server-->>browser: HTTP 302 Redirect to /exampleapp/notes
     deactivate server
 

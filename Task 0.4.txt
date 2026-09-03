@@ -25,7 +25,10 @@ sequence Diagram
 
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
     activate server
-    server-->>browser : [{"content": "hi hi", "date": "2026-09-03T09:29:32.278Z"}, ...]
+    server-->>browser: [{"content": "hi hi", "date": "2026-09-03T09:29:32.278Z"}, ...]
     deactivate server
 
-    
+    browser->>server: GET chrome-extension://dacdinoicboceafielngnmjjplncljhj/content.css
+    activate server
+    server-->>browser: the css file
+    deactivate server
